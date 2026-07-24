@@ -1,19 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard Inventario</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="body">
-    <div class="banner">
-        <img src="/Screenshot 2026-07-20 214642.png" alt="Banner imagen">
-    </div>
-    <p class="titulo">Yo creo que este será el inicio de una página web de un sistema de gestión de almacén de productos todo lo que me llegue lo tendre en lista para llevar aa cabo mis ventas ganancias produtos y demas...</p>
-    <div class="slider">
-        <img src="/ugreen.png" alt="Slider imagen">
-        <img src="/anker.png" alt="Slider imagen">
+<body>
+    <div class="layout">
+        
+        <aside class="sidebar">
+            <h2>Inventario</h2>
+            <nav class="menu">
+                <a href="#" class="active">Inicio</a>
+                <a href="#">Repuestos</a>
+                <a href="#">Accesorios</a>
+                <a href="#">Ventas</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            
+            <div class="banner">
+                <img src="/Screenshot 2026-07-20 214642.png" alt="Banner">
+            </div>
+
+            <p>Panel principal para el sistema de gestión de almacén. Todo lo que ingrese estará en lista para controlar ventas, ganancias, productos y stock.</p>
+
+            <div class="cajas">
+                <div class="caja">
+                    <h3>Total en Inventario</h3>
+                    <p class="valor azul">$ 12,500</p>
+                    <span>Valor en almacén</span>
+                </div>
+                
+                <div class="caja">
+                    <h3>Ganancias Totales</h3>
+                    <p class="valor verde">$ 3,240</p>
+                    <span>Ingresos del mes</span>
+                </div>
+                
+                <div class="caja">
+                    <h3>Ventas de Hoy</h3>
+                    <p class="valor morado">18</p>
+                    <span>Artículos entregados</span>
+                </div>
+                
+                <div class="caja borde-rojo">
+                    <h3>Stock Bajo</h3>
+                    <p class="valor rojo">4</p>
+                    <span>Por agotar</span>
+                </div>
+            </div>
+
+            <div class="marcas">
+                <h3>Marcas en Stock</h3>
+                <img src="/ugreen.png" alt="Ugreen" height="40">
+                <img src="/anker.png" alt="Anker" height="40">
+            </div>
+
+        </main>
     </div>
 </body>
 </html>
