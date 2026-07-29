@@ -42,7 +42,13 @@ body {
     display: flex;
     gap: 15px;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
+}
+.nav a:hover {
+    color: #3b82f6;
+    background-color: #1f2937;
 }
 
 .nav a {
@@ -156,7 +162,7 @@ body {
     text-decoration: none;
 }
 
-/* Propiedades para la imagen horizontal */
+
 .logo-img {
     max-height: 45px;      /* Altura máxima para no estirar la barra */
     max-width: 320px;      /* Ancho máximo horizontal */
@@ -183,7 +189,8 @@ body {
     text-align: center;
     font-size: 24px;
     color: #111827;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
 }
 
 .novedades-grid {
@@ -235,6 +242,40 @@ body {
     font-weight: bold;
 }
 
+.footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.form-contacto {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-contacto label {
+    display: block;
+    margin-top: 10px;
+}
+
+.form-contacto input,
+.form-contacto textarea,
+.form-contacto button {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+.form-contacto button {
+    background: #007bff;
+    color: white;
+    border: none;
+    margin-top: 12px;
+    cursor: pointer;
+}
 
 @media (max-width: 768px) {
     .novedades-grid {
@@ -246,3 +287,4 @@ body {
         height: 180px;
     }
 }
+
