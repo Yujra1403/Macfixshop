@@ -42,9 +42,7 @@ body {
     display: flex;
     gap: 15px;
     align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(2, 1fr);
+    
 }
 .nav a:hover {
     color: #3b82f6;
@@ -177,6 +175,11 @@ body {
     .logo-img {
         max-height: 38px;  /* Se reduce ligeramente en pantallas pequeñas */
         max-width: 250px;
+    }
+    .nav {
+        flex-direction: column; /* Se apila solo en pantalla chica */
+        justify-content: center;
+        width: 100%;
     }
 }
 
