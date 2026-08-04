@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda anker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header id="inicio">
+            <div class="container-cabeza">
+                <h1>Anker</h1>
+                <button id="botonmenu" class="menu">☰</button>
+                <nav class="nav" id="menu">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#productos">productos</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+            </div>
+        </header>z
+
+        <main>
+            <section id="productos" class="tarjeta">
+                <h2>Productos</h2>
+                <ul>
+                    <li>cargador anker 30w carga rapida - 250bs</li>
+                    <li>cable c a c de dos metros - 175bs</li>   
+                    <li>powerbank 20000mah - 300bs</li>
+                </ul>
+            </section>
+            <section id="contacto" class="tarjeta">
+                <h2>contacto</h2>
+                <form action="">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="pontucorreoaqui@correo.com" required>
+                    <label for="pedido">Tu pedido</label>
+                    <textarea id="pedido" name="pedido" rows="4" placeholder="que productos te gustaria ordenar?"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </section>
+            
+        </main>
+        <footer class="footer">
+            <p>&copy; 2023 MacFix Shop. Todos los derechos reservados.</p>
+        </footer>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
