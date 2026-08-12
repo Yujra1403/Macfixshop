@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>optica mirasol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Optica Mirasol</h1>
+        </header>
+        <p>Nos dedicamos a cuidar tu vista dia a dia con nuestra especialidad en ojos</p>
+        <form id="form-cita" novalidate method="POST" action="procesar.php">
+            
+            <div class="campo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+
+            <div class="campo">
+                <label for="consulta"> Contanos qué necesitás</label>
+                <textarea id="consulta" name="consulta" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Pedir mi cita</button>
+            <p id="aviso-cita" class="aviso"></p>
+
+        </form>
+
+        <footer>
+            Parcial 2 - Samuel David Yujra Nina - 11 de agosto de 2026
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

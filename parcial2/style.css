@@ -1,0 +1,44 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+.contenedor {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+}
+.campo {
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background: #3bb728;
+  color: #fff;
+}
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  padding-top: 10px;
+}
+.aviso {
+  display: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.aviso.error {
+  display: block;
+  color: #b00020;
+}
+.aviso.exito {
+  display: block;
+  color: #1b7f3b;
+}
