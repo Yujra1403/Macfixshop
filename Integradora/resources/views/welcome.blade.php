@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MacFix Shop - Accesorios Ugreen y Anker</title>
+    <link rel="stylesheet" href="{{ asset('style.css') }}" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <a href="#" class="logo-link">
+          <img src="img/banner.png" alt="MacFix Shop Logo" class="logo-img" />
+        </a>
+        <button id="btn-menu" class="btn-menu">☰</button>
+        <nav class="nav" id="menu">
+          <a href="#ugreen">Ugreen</a>
+          <a href="#anker">Anker</a>
+          <a href="/contacto">Contacto</a>
+          <a href="login.html" class="btn-login">Sistema Inventario</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="novedades-section">
+        <div class="container">
+          <h2 class="novedades-title">Lo Nuevo en MacFix Shop</h2>
+
+          <div class="novedades-grid">
+            <!-- 2 Imágenes Arriba -->
+            <div class="novedad-card top-row">
+              <img src="img/new1.webp" alt="Nuevo ingreso cargadores" />
+              <div class="novedad-overlay">
+                <span>Powerbank 1000 mha</span>
+              </div>
+            </div>
+
+            <div class="novedad-card top-row">
+              <img src="img/new2.webp" alt="Nuevo ingreso hubs" />
+              <div class="novedad-overlay">
+                <span>Carga inalambrica</span>
+              </div>
+            </div>
+
+            <!-- 3 Imágenes Abajo -->
+            <div class="novedad-card bottom-row">
+              <img src="img/new3.webp" alt="Nuevo ingreso cables" />
+              <div class="novedad-overlay">
+                <span>Powerbank 20000 mha</span>
+              </div>
+            </div>
+
+            <div class="novedad-card bottom-row">
+              <img src="img/new4.webp" alt="Nuevo ingreso soportes" />
+              <div class="novedad-overlay">
+                <span>300w de potencia</span>
+              </div>
+            </div>
+
+            <div class="novedad-card bottom-row">
+              <img src="img/new5.webp" alt="Nuevo ingreso audífonos" />
+              <div class="novedad-overlay">
+                <span>Carga rapida</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ugreen" class="brand-section">
+        <div class="container">
+          <h2 class="brand-title">Catálogo Ugreen</h2>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <img src="img/cargador65w.jpg" alt="Cargador Ugreen" />
+              <h3>Cargador Nexode 65W</h3>
+              <p class="price">Bs. 355</p>
+              <button class="btn-buy">Me interesa</button>
+            </article>
+
+            <article class="product-card">
+              <img src="img/cac100w.jpg" alt="Cable Ugreen" />
+              <h3>Cable USB-C a USB-C 100W</h3>
+              <p class="price">Bs. 100</p>
+              <button class="btn-buy">Me interesa</button>
+            </article>
+
+            <article class="product-card">
+              <img src="img/hub.jpg" alt="Hub Ugreen" />
+              <h3>Hub Adaptador 7 en 1</h3>
+              <p class="price">Bs. 250</p>
+              <button class="btn-buy">Me interesa</button>
+            </article>
+
+            <article class="product-card">
+              <img src="img/soporte.jpg" alt="Soporte Ugreen" />
+              <h3>Soporte Magnético Auto</h3>
+              <p class="price">Bs. 180</p>
+              <button class="btn-buy">Me interesa</button>
+            </article>
+
+            <article class="product-card">
+              <img src="img/power.webp" alt="Powerbank Ugreen" />
+              <h3>Powerbank Ugreen 20000mAh</h3>
+              <p class="price">Bs. 450</p>
+              <button class="btn-buy">Me interesa</button>
+            </article>
+
+            <article class="product-card">
+              <img src="img/100w.webp" alt="Auriculares Ugreen" />
+              <h3>Cargador de 100w de potencia</h3>
+              <p class="price">Bs. 750</p>
+              <button class="btn-buy">Me interesa</button>
+            </article>
+
+            <article class="product-card">
+              <img src="img/30w.webp" alt="Cable Ugreen" />
+              <h3>Cargador de 30w de potencia</h3>
+              <p class="price">Bs. 210</p>
+              <button class="btn-buy">Me interesa</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="anker" class="brand-section anker-bg">
+        <div class="container">
+          <h2 class="brand-title">Catálogo Anker</h2>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <img src="img/an10000.jpg" alt="Powerbank Anker" />
+              <h3>PowerCore 10000mAh</h3>
+              <p class="price">Bs. 350</p>
+              <button class="btn-buy">Me interesa</button>
+            </article>
+
+            <article class="product-card">
+              <img src="img/ankernano20w.jpg" alt="Cargador Anker" />
+              <h3>Cargador Nano 20W</h3>
+              <p class="price">Bs. 150</p>
+              <button class="btn-buy">Me interesa</button>
+            </article>
+
+            <article class="product-card">
+              <img src="img/ankerligthning.jpg" alt="Cable Anker" />
+              <h3>Cable Lightning PowerLine III</h3>
+              <p class="price">Bs. 120</p>
+              <button class="btn-buy">Me interesa</button>
+            </article>
+
+            <article class="product-card">
+              <img src="img/ankersound.jpg" alt="Audífonos Anker" />
+              <h3>Soundcore Life P2i</h3>
+              <p class="price">Bs. 360</p>
+              <button class="btn-buy">Me interesa</button>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="info-footer">&copy; 2026 MacFix Shop - La Paz, Bolivia</p>
+      </div>
+    </footer>
+    <script src="{{ asset('app.js') }}"></script>
+  </body>
+</html>
