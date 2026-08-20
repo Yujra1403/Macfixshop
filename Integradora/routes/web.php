@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Models\Herramienta;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +19,8 @@ use App\Models\Herramienta;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $productos = App\Models\Producto::all(); 
+    return view('welcome', ['productos' => $productos]);
 });
 
 Route::get('/contacto', function () {
@@ -35,6 +39,55 @@ Route::post('/procesar', function (Request $request) {
     
     echo "<br><a href='/'>Volver a MacFix Shop</a>";
 });
+
+
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login'); 
+
+Route::post('/login', function () {
+    $credenciales = [
+        'email' => request()->input('email'),
+        'password' => request()->input('password')
+    ];
+
+    if (Auth::attempt($credenciales)) {
+        request()->session()->regenerate();
+        return redirect('/panel');
+    }
+
+    return back()->with('error', 'Correo o contraseña incorrectos.');
+});
+
+Route::get('/panel', function () {
+    return view('panel');
+})->middleware('auth');
+
+Route::post('/productos', function () {
+    //Validar
+    request()->validate([
+        'nombre' => 'required',
+        'precio' => 'required|integer',
+        'marca'  => 'required',
+        'imagen' => 'required|image'
+    ]);
+
+    $rutaImagen = request()->file('imagen')->store('img', 'public');
+
+    App\Models\Producto::create([
+        'nombre' => request()->input('nombre'),
+        'precio' => request()->input('precio'),
+        'marca'  => request()->input('marca'),
+        'imagen' => $rutaImagen
+    ]);
+
+    return redirect('/panel')->with('exito', 'Producto agregado');
+})->middleware('auth');
+
+
+
+
 //Parte del parcial de Laravel, para el manejo de herramientas
 Route::get('/herramientas', function () {
     $herramientas = App\Models\Herramienta::all();
@@ -63,3 +116,4 @@ Route::post('/herramientas/nuevo', function () {
 
     return redirect('/herramientas');
 });
+

@@ -86,7 +86,7 @@ body {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
@@ -337,3 +337,35 @@ body {
     }
 }
 
+.formulario-contacto select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #374151;
+    border-radius: 5px;
+    background-color: #111827;
+    color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.formulario-contacto select:focus {
+    border-color: #3bb728;
+}
+
+.formulario-contacto input[type="file"] {
+    border: none;
+    background-color: transparent;
+    padding: 6px 0;
+    color: #e5e7eb;
+    cursor: pointer;
+}
+
+.error-mensaje {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}

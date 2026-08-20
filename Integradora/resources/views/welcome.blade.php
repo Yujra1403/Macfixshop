@@ -17,7 +17,7 @@
           <a href="#ugreen">Ugreen</a>
           <a href="#anker">Anker</a>
           <a href="/contacto">Contacto</a>
-          <a href="login.html" class="btn-login">Sistema Inventario</a>
+          <a href="/login" class="btn-login">Sistema Inventario</a>
         </nav>
       </div>
     </header>
@@ -68,95 +68,46 @@
         </div>
       </section>
 
+      <!-- SECCIÓN UGREEN: Ahora es dinámica -->
       <section id="ugreen" class="brand-section">
         <div class="container">
           <h2 class="brand-title">Catálogo Ugreen</h2>
 
           <div class="product-grid">
-            <article class="product-card">
-              <img src="img/cargador65w.jpg" alt="Cargador Ugreen" />
-              <h3>Cargador Nexode 65W</h3>
-              <p class="price">Bs. 355</p>
-              <button class="btn-buy">Me interesa</button>
-            </article>
-
-            <article class="product-card">
-              <img src="img/cac100w.jpg" alt="Cable Ugreen" />
-              <h3>Cable USB-C a USB-C 100W</h3>
-              <p class="price">Bs. 100</p>
-              <button class="btn-buy">Me interesa</button>
-            </article>
-
-            <article class="product-card">
-              <img src="img/hub.jpg" alt="Hub Ugreen" />
-              <h3>Hub Adaptador 7 en 1</h3>
-              <p class="price">Bs. 250</p>
-              <button class="btn-buy">Me interesa</button>
-            </article>
-
-            <article class="product-card">
-              <img src="img/soporte.jpg" alt="Soporte Ugreen" />
-              <h3>Soporte Magnético Auto</h3>
-              <p class="price">Bs. 180</p>
-              <button class="btn-buy">Me interesa</button>
-            </article>
-
-            <article class="product-card">
-              <img src="img/power.webp" alt="Powerbank Ugreen" />
-              <h3>Powerbank Ugreen 20000mAh</h3>
-              <p class="price">Bs. 450</p>
-              <button class="btn-buy">Me interesa</button>
-            </article>
-
-            <article class="product-card">
-              <img src="img/100w.webp" alt="Auriculares Ugreen" />
-              <h3>Cargador de 100w de potencia</h3>
-              <p class="price">Bs. 750</p>
-              <button class="btn-buy">Me interesa</button>
-            </article>
-
-            <article class="product-card">
-              <img src="img/30w.webp" alt="Cable Ugreen" />
-              <h3>Cargador de 30w de potencia</h3>
-              <p class="price">Bs. 210</p>
-              <button class="btn-buy">Me interesa</button>
-            </article>
+            <!-- Inicio del ciclo Laravel para Ugreen -->
+            @foreach($productos as $producto)
+                @if($producto->marca == 'ugreen')
+                    <article class="product-card">
+                        <img src="{{ asset('storage/' . $producto->imagen) }}" alt="{{ $producto->nombre }}" />
+                        <h3>{{ $producto->nombre }}</h3>
+                        <p class="price">Bs. {{ $producto->precio }}</p>
+                        <button class="btn-buy">Me interesa</button>
+                    </article>
+                @endif
+            @endforeach
+            <!-- Fin del ciclo -->
           </div>
         </div>
       </section>
 
+      <!-- SECCIÓN ANKER: Ahora es dinámica -->
       <section id="anker" class="brand-section anker-bg">
         <div class="container">
           <h2 class="brand-title">Catálogo Anker</h2>
 
           <div class="product-grid">
-            <article class="product-card">
-              <img src="img/an10000.jpg" alt="Powerbank Anker" />
-              <h3>PowerCore 10000mAh</h3>
-              <p class="price">Bs. 350</p>
-              <button class="btn-buy">Me interesa</button>
-            </article>
-
-            <article class="product-card">
-              <img src="img/ankernano20w.jpg" alt="Cargador Anker" />
-              <h3>Cargador Nano 20W</h3>
-              <p class="price">Bs. 150</p>
-              <button class="btn-buy">Me interesa</button>
-            </article>
-
-            <article class="product-card">
-              <img src="img/ankerligthning.jpg" alt="Cable Anker" />
-              <h3>Cable Lightning PowerLine III</h3>
-              <p class="price">Bs. 120</p>
-              <button class="btn-buy">Me interesa</button>
-            </article>
-
-            <article class="product-card">
-              <img src="img/ankersound.jpg" alt="Audífonos Anker" />
-              <h3>Soundcore Life P2i</h3>
-              <p class="price">Bs. 360</p>
-              <button class="btn-buy">Me interesa</button>
-            </article>
+            <!-- Inicio del ciclo Laravel para Anker -->
+            @foreach($productos as $producto)
+                @if($producto->marca == 'anker')
+                    <article class="product-card">
+                        <img src="{{ asset('storage/' . $producto->imagen) }}" alt="{{ $producto->nombre }}" />
+                        <h3>{{ $producto->nombre }}</h3>
+                        <p class="price">Bs. {{ $producto->precio }}</p>
+                        <button class="btn-buy">Me interesa</button>
+                    </article>
+                @endif
+            @endforeach
+            <!-- Fin del ciclo -->
           </div>
         </div>
       </section>

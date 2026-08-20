@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto - MacFix Shop</title>
+    <title>MacFix Shop - Sistema</title>
+    <!-- Cargamos tu CSS oscuro y elegante -->
     <link rel="stylesheet" href="{{ asset('style.css') }}" />
   </head>
   <body>
@@ -23,33 +24,8 @@
     </header>
 
     <main class="main">
-      <section id="contacto" class="contacto-section">
-        <div class="container">
-          <h2>Contáctanos</h2>
-
-          <form id="form-contacto" action="/procesar" method="POST" class="formulario-contacto" novalidate>
-            @csrf
-            <div class="campo">
-              <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" />
-            </div>
-
-            <div class="campo">
-              <label for="email">Correo electrónico:</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div class="campo">
-              <label for="mensaje">Mensaje:</label>
-              <textarea id="mensaje" name="mensaje" rows="4"></textarea>
-            </div>
-
-            <button type="submit">Enviar</button>
-
-            <p id="aviso-contacto"></p>
-          </form>
-        </div>
-      </section>
+        <!-- Aquí es donde se inyectará el panel o el login -->
+        @yield('contenido')
     </main>
 
     <footer class="footer">

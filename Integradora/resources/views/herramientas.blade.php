@@ -1,4 +1,4 @@
-@extends('layouts.base')
+
 @section('contenido')
     <p>En la ferreteria el tornillo encuentras todo tipo de herramientas para el uso diario</p>
     <p><strong>Hay {{ count($herramientas) }} herramientas en el inventario.</strong></p>
